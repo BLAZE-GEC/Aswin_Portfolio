@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects - Aswin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">Aswin</div>
+    <div class="hamburger">&#9776;</div>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="project.html">Projects</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <!-- ONGOING PROJECTS -->
+  <section class="project-section">
+    <h2 class="project-title">Ongoing Projects</h2>
+
+    <div class="project-gallery">
+
+      <div class="project-card">
+        <img src="Resources/ongoing1.png" alt="">
+        <div class="project-content">
+          <h3>HUSK BOT</h3>
+          <p>Developing a vector thrust mechanism for a custom micro jet engine.</p>
+          <a class="btn outline" href="#">View Project</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="Resources/ongoing2.png" alt="">
+        <div class="project-content">
+          <h3>OSCILLOSCOPE</h3>
+          <p>Space rover prototype with navigation, vision and autonomous control.</p>
+          <a class="btn outline" href="#">View Project</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="Resources/ongoing3.png" alt="">
+        <div class="project-content">
+          <h3>ABAJA </h3>
+          <p>Wearable assistive device for speech-impaired individuals.</p>
+          <a class="btn outline" href="#">View Project</a>
+        </div>
+
+      </div>
+      <div class="project-card">
+        <img src="Resources/ongoing1.png" alt="">
+        <div class="project-content">
+          <h3>HUSK BOT</h3>
+          <p>Developing a vector thrust mechanism for a custom micro jet engine.</p>
+          <a class="btn outline" href="#">View Project</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COMPLETED PROJECTS -->
+  <section class="project-section">
+    <h2 class="project-title">Completed Projects</h2>
+
+    <div class="project-gallery">
+
+      <div class="project-card">
+        <img src="Resources/abjacover.png" alt="ABAJA">
+        <div class="project-content">
+          <h3>Smart Home IoT System</h3>
+          <p>Home automation using ESP32, MQTT, cloud dashboards, and real-time monitoring.</p>
+          <a class="btn outline" href="#">View Project</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="Resources/Pantiltcover.png" alt="PAN-TILT-AUBO ROBO">
+        <div class="project-content">
+          <h3>Wearable Device PCB</h3>
+          <p>4-layer compact wearable PCB with BLE, sensors, and wireless charging integration.</p>
+          <a class="btn outline" href="#">View Project</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="Resources/Delta.png" alt="DELTA PARALLEL ROBOT">
+        <div class="project-content">
+          <h3>Industrial Control System</h3>
+          <p>PLC-SCADA based automatic control with Modbus communication and HMI.</p>
+          <a class="btn outline" href="#">View Project</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="Resources/mbajacover.png" alt="ACC System">
+        <div class="project-content">
+          <h3>Autonomous Baja – ACC System</h3>
+          <p>Developed Adaptive Cruise Control using radar, IMU, CAN & RoadRunner simulations.</p>
+          <a class="btn outline" href="#">View Project</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="Resources/Voltage.png" alt="Fire Detection Drone">
+        <div class="project-content">
+          <h3>Fire Detection Drone</h3>
+          <p>Drone with Intel RealSense D435 for depth mapping and fire detection.</p>
+          <a class="btn outline" href="#">View Project</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="Resources/waste.png" alt="PLC Automation">
+        <div class="project-content">
+          <h3>PLC Automation Project</h3>
+          <p>Industrial automation using Delta PLC with ladder logic and SCADA monitoring.</p>
+          <a class="btn outline" href="#">View Project</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+  <footer>
+    <p>&copy; 2025 Aswin. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+
+</body>
+</html>
