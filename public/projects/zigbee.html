@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZigBee-CAN Monitoring Project</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    .project-header {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .project-header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .project-header p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    /* Main Content */
+    .project-content {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.3rem;
+      color: #2a5298;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* Full width section */
+    .full-width {
+      grid-column: 1 / -1;
+      text-align: center;
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Button */
+    .back-btn {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      color: #2a5298;
+      border: 2px solid #2a5298;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #2a5298;
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .project-header h1 {
+        font-size: 1.8rem;
+      }
+
+      iframe {
+        height: 400px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="project-header">
+    <h1>ZigBee-CAN Monitoring System</h1>
+    <p>Hybrid wired-wireless real-time data acquisition and remote monitoring</p>
+  </header>
+
+  <section class="project-content">
+
+    <div class="card">
+      <h2>📌 Overview</h2>
+      <p>
+        This project implements a hybrid communication system that integrates the robustness of 
+        the CAN Bus protocol with the wireless flexibility of ZigBee. It enables real-time 
+        monitoring of sensor data, bypassing the physical limitations of purely wired networks.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>⚙️ Objectives</h2>
+      <ul>
+        <li>Design a reliable CAN Bus communication network</li>
+        <li>Integrate ZigBee for remote wireless data monitoring</li>
+        <li>Implement low-power real-time data acquisition</li>
+        <li>Minimize cost using lab-available X2C ZigBee modules</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🧠 Methodology</h2>
+      <p>
+        Ultrasonic sensor data is processed via ESP32 and transmitted over a CAN network using 
+        MCP2515 controllers. A central node interfaces the CAN data with a ZigBee module 
+        (configured via Arduino Uno) for wireless transmission to a remote station.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🛠️ Technologies Used</h2>
+      <ul>
+        <li>ESP32 Microcontrollers (UART/SPI/I2C)</li>
+        <li>MCP2515 CAN Bus Modules</li>
+        <li>X2C ZigBee Modules & Shields</li>
+        <li>ESP-IDF Development Framework</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🚀 Features</h2>
+      <ul>
+        <li>Hybrid wired-wireless architecture</li>
+        <li>Real-time sensor data acquisition</li>
+        <li>Scalable and low-power system design</li>
+        <li>Integrated local LCD display</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>📊 Applications</h2>
+      <ul>
+        <li>Automotive diagnostics</li>
+        <li>Industrial monitoring systems</li>
+        <li>Smart grid systems</li>
+        <li>IoT-based remote environmental monitoring</li>
+      </ul>
+    </div>
+
+    <div class="card full-width">
+      <h2>📄 Project Report</h2>
+      <p>View the detailed ZigBee-CAN Monitoring System report below.</p>
+
+      <iframe src="../Resources/zigbee.pdf"></iframe>
+
+      <p style="margin-top:10px;">
+        For full-screen viewing, 
+        <a href="../Resources/zigbee.pdf" target="_blank">
+          click here to open the report
+        </a>.
+      </p>
+    </div>
+
+  </section>
+
+  <div class="back-btn">
+    <a href="../index.html" class="btn">⬅ Back to Portfolio</a>
+  </div>
+
+</body>
+</html>

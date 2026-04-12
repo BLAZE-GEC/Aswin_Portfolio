@@ -196,6 +196,57 @@ header {
 .about-card .icon {
   font-size: 1.3rem;
 }
+/* ---------- Experience Only Styling (Safe) ---------- */
+
+/* Section background */
+#experience {
+  background: #f9fbfd;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+/* ONLY target cards inside experience */
+#experience .project-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  transition: all 0.25s ease;
+}
+
+/* Hover effect (subtle, clean) */
+#experience .project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Title accent */
+#experience .project-card h3 {
+  color: #111;
+  position: relative;
+}
+
+/* Small underline accent */
+#experience .project-card h3::after {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 3px;
+  background: #0077b6;
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+/* Company line */
+#experience .project-card strong {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Slight emphasis for top roles ONLY (no layout break) */
+#experience .project-card:nth-child(1),
+#experience .project-card:nth-child(2) {
+  border-left: 4px solid #0077b6;
+}
 
 /* ---------- Projects Section (Merged + Improved) ---------- */
 #projects {

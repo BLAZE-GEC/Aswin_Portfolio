@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FPGA Image Encryption Project</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    .project-header {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .project-header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    .project-header p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    /* Main Content */
+    .project-content {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.3rem;
+      color: #2a5298;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* Full width section */
+    .full-width {
+      grid-column: 1 / -1;
+      text-align: center;
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Button */
+    .back-btn {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      color: #2a5298;
+      border: 2px solid #2a5298;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #2a5298;
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .project-header h1 {
+        font-size: 1.8rem;
+      }
+
+      iframe {
+        height: 400px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="project-header">
+    <h1>FPGA-Based Image Encryption</h1>
+    <p>High-speed secure image processing using hardware acceleration</p>
+  </header>
+
+  <!-- Content -->
+  <section class="project-content">
+
+    <div class="card">
+      <h2>📌 Overview</h2>
+      <p>
+        This project focuses on implementing real-time image encryption using FPGA.
+        The system enhances security by encrypting image data at hardware level,
+        ensuring fast and efficient processing compared to software methods.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>⚙️ Objective</h2>
+      <ul>
+        <li>Design a hardware-based encryption system</li>
+        <li>Achieve real-time image processing</li>
+        <li>Ensure secure transmission of image data</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🧠 Methodology</h2>
+      <p>
+        The encryption algorithm is implemented using FPGA logic blocks.
+        The image is processed pixel-by-pixel and encrypted using
+        transformation techniques and key-based operations.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>🛠️ Technologies Used</h2>
+      <ul>
+        <li>FPGA (Verilog/VHDL)</li>
+        <li>Digital Image Processing</li>
+        <li>Hardware Design & Simulation</li>
+        <li>MATLAB (for verification)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🚀 Features</h2>
+      <ul>
+        <li>High-speed parallel processing</li>
+        <li>Low latency encryption</li>
+        <li>Secure key-based system</li>
+        <li>Hardware-level implementation</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>📊 Applications</h2>
+      <ul>
+        <li>Secure communication systems</li>
+        <li>Defense and surveillance</li>
+        <li>Medical image protection</li>
+        <li>Cloud data security</li>
+      </ul>
+    </div>
+
+    <!-- PDF Viewer -->
+   <div class="card full-width">
+  <h2>📄 Project Report</h2>
+  <p>View the detailed FPGA Image Encryption report below.</p>
+
+  <iframe src="../Resources/fpga.pdf"></iframe>
+
+  <p style="margin-top:10px;">
+    For full-screen viewing, 
+    <a href="../Resources/fpga.pdf" target="_blank">
+      click here to open it
+    </a>.
+  </p>
+</div>
+
+  </section>
+
+  <!-- Back Button -->
+  <div class="back-btn">
+    <a href="../index.html" class="btn">⬅ Back to Portfolio</a>
+  </div>
+
+</body>
+</html>
