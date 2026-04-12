@@ -1,41 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>A-BAJA Project</title>
-  <link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <title>Adaptive Cruise Control Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e293b, #020617);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: #38bdf8;
+        }
+
+        header p {
+            margin-top: 10px;
+            color: #94a3b8;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .story {
+            background: #020617;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+        }
+
+        .story h2 {
+            color: #38bdf8;
+            margin-bottom: 20px;
+        }
+
+        .images {
+            margin-top: 40px;
+        }
+
+        .images h2 {
+            color: #38bdf8;
+            margin-bottom: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #020617;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0,0,0,0.4);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card p {
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #64748b;
+        }
+    </style>
 </head>
 
 <body>
 
-<nav>
-  <div class="logo">Aswin</div>
-  <ul class="nav-links">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../project.html">Projects</a></li>
-  </ul>
-</nav>
+<header>
+    <h1>Adaptive Cruise Control System</h1>
+    <p>Control Systems | Embedded Systems | Autonomous Vehicles</p>
+</header>
 
-<section style="max-width:900px; margin:auto; padding:2rem;">
-  <h2>A-BAJA 2025</h2>
+<div class="container">
 
-  <img src="../Resources/abjacover.png" style="width:100%; border-radius:10px; margin:1rem 0;">
+    <div class="story">
+        <h2>Project Journey</h2>
+        <p>
+            I worked on developing an Adaptive Cruise Control ACC system with the goal of maintaining a one second time headway from the vehicle in front, and the journey turned out to be far more insightful than I initially expected. I began with a simple idea of minimizing relative velocity using a PID controller, assuming that matching the speed of the lead vehicle would naturally maintain a safe gap. While this worked for basic scenarios, it quickly failed when tested under varied conditions, making it clear that velocity alone was not enough. I then shifted my approach to a time headway based control strategy, where I calculated the desired distance using the ego vehicle speed and generated a spacing error that was fed into a controller. The initial implementation caused jerky behavior, which led me to design a cascaded PID architecture, where one controller corrected spacing error and generated a velocity reference, and another controller ensured a smooth velocity response. This significantly improved stability and comfort, but real world scenarios such as lane cut in, cut out, and the absence of a lead vehicle required a more adaptive solution. I developed a hybrid control system that dynamically switched between time gap control and constant velocity control of 30 km per hour based on filtered radar inputs received through CAN communication. The entire system was first built and validated in MATLAB and Simulink and later tested in IPG CarMaker across multiple driving scenarios. During the final stages, I encountered a major setback when incompatible CAN drivers disabled SocketCAN support, preventing me from porting my Simulink model to hardware. With limited time and experience in Python, I rebuilt the entire ACC system from scratch using Python and ROS, including CAN communication, radar data parsing, and filtering. Alongside software, I was deeply involved in hardware and software integration, debugging real time issues, and solving a critical throttle problem by identifying and maintaining a minimum priming signal of about 0.8 volts through CAN so that the vehicle could operate autonomously without manual input. Despite these challenges, the system performed reliably across all scenarios, and this effort contributed to securing an overall rank 2 in the competition. More than the result, this journey taught me how control theory, embedded systems, and real world constraints come together, and how systems can be rebuilt under pressure when things do not go as planned.
+        </p>
+    </div>
 
-  <p>
-    Autonomous vehicle developed for SAE aBAJA competition. 
-    Includes Adaptive Cruise Control (ACC), sensor fusion, 
-    and real-time deployment on Jetson Orin Nano.
-  </p>
+    <div class="images">
+        <h2>Implementation & Simulation</h2>
 
-  <h3>Technologies Used</h3>
-  <ul>
-    <li>MATLAB Simulink</li>
-    <li>IPG CarMaker</li>
-    <li>ROS2</li>
-    <li>Jetson Orin Nano</li>
-  </ul>
+        <div class="grid">
 
-</section>
+            <div class="card">
+                <img src="simulink1.jpg" alt="Simulink Model 1">
+                <p>Simulink Control Model</p>
+            </div>
+
+            <div class="card">
+                <img src="simulink2.jpg" alt="Simulink Model 2">
+                <p>Cascaded PID Implementation</p>
+            </div>
+
+            <div class="card">
+                <img src="simulink3.jpg" alt="Simulink Model 3">
+                <p>System Integration in Simulink</p>
+            </div>
+
+            <div class="card">
+                <img src="timegap.jpg" alt="Time Headway Logic">
+                <p>Time Headway Logic</p>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Aswin | Adaptive Cruise Control Project</p>
+</footer>
 
 </body>
 </html>
