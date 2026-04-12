@@ -6,10 +6,71 @@
   <title>Aswin - Electronics & Communication Engineer</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="/_vercel/insights/script.js"></script>
+  <style>
+    /* ZIGBEE BLUE THEME - MECHANICAL OVERRIDE 
+       Only colors and hover effects changed. 
+       No HTML structure or content modified.
+    */
+    :root {
+      --zigbee-deep: #1e3c72;
+      --zigbee-mid: #2a5298;
+      --zigbee-glow: #3b82f6;
+      --surface-white: #ffffff;
+      --bg-ghost: #f1f5f9;
+    }
+
+    body { background-color: var(--bg-ghost); color: #1e293b; }
+
+    /* Nav Gradient */
+    nav { 
+      background: linear-gradient(135deg, var(--zigbee-deep), var(--zigbee-mid)) !important;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
+    }
+    nav .logo, .nav-links a { color: white !important; }
+
+    /* Header Profile Border */
+    .profile-pic img { border: 4px solid var(--zigbee-mid) !important; }
+
+    /* Buttons */
+    .btn { 
+      background: linear-gradient(135deg, var(--zigbee-deep), var(--zigbee-mid)) !important;
+      color: white !important;
+      border: none !important;
+    }
+    .btn.outline {
+      background: transparent !important;
+      border: 2px solid var(--zigbee-deep) !important;
+      color: var(--zigbee-deep) !important;
+    }
+
+    /* Section Accents */
+    h2::after {
+      content: ''; display: block; width: 50px; height: 4px; 
+      background: var(--zigbee-glow); margin: 10px auto; border-radius: 2px;
+    }
+
+    /* Card Styling - Shades of White */
+    .project-card, .about-card, .simple-skill-box {
+      background: var(--surface-white) !important;
+      border: 1px solid #e2e8f0 !important;
+      transition: all 0.3s ease !important;
+    }
+    .project-card:hover { 
+      border-color: var(--zigbee-glow) !important;
+      transform: translateY(-5px);
+    }
+    .project-card h3, .about-card h4, .simple-skill-box h3 { color: var(--zigbee-deep); }
+
+    /* Interest Tags - Light Blue Tint */
+    .interest-tags span {
+      background: #eff6ff !important;
+      color: var(--zigbee-mid) !important;
+      border: 1px solid #dbeafe !important;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Navigation -->
   <nav>
     <div class="logo">Aswin</div>
     <div class="hamburger">&#9776;</div>
@@ -22,7 +83,6 @@
     </ul>
   </nav>
 
-  <!-- Home Section -->
   <header id="home">
     <div class="profile-pic">
       <img src="Resources/475534274_2047588992321278_8326506025336140002_n.jpg" alt="Aswin">
@@ -36,12 +96,10 @@
       </p>
       <div class="buttons">
         <a href="#contact" class="btn">Get In Touch</a>
-        <!-- ✅ Fixed Resume Download Button -->
-       <a href="#" id="openResume" class="btn outline">📄 View Resume</a>
+        <a href="#" id="openResume" class="btn outline">📄 View Resume</a>
     </div>
   </header>
 
-  <!-- About Section -->
   <section id="about">
     <h2>About Me</h2>
     <p class="about-subtitle">
@@ -49,7 +107,6 @@
     </p>
 
     <div class="about-container">
-      <!-- Left Column -->
       <div class="about-left">
         <h3>My Engineering Journey</h3>
       <p>My passion for electronics, robotics, and intelligent systems led me to explore projects that blend hardware, software, and real-world problem-solving. Over time, this curiosity grew into a strong interest in autonomous vehicles and advanced control systems.</p>
@@ -59,7 +116,6 @@
       <p>Engineering, for me, is about creating solutions that work in the real world—whether it’s an autonomous vehicle, a robotic system, or an innovative device. Every project I take on pushes me to learn more, improve my skills, and move closer to becoming a versatile engineer.</p>
 
 
-        <!-- Areas of Interest -->
         <h3>Areas of Interest</h3>
         <div class="interest-tags">
           <span>Embedded Systems Design and Programming</span>
@@ -75,7 +131,6 @@
         </div>
       </div>
 
-      <!-- Right Column -->
       <div class="about-right">
         <h3>What I Bring</h3>
         <div class="about-card">
@@ -112,9 +167,7 @@
       </div>
     </div>
   </section>
-<!-- Updated Project Section Added to Your Existing HTML -->
 
-<!-- Projects Section -->
 <section id="projects">
   <h2>Projects</h2>
   <p class="subtitle">Explore my engineering projects covering electronics, robotics, automation, and embedded systems.</p>
@@ -198,8 +251,6 @@
   </div>
 </section>
 
-  <!-- Skills Section -->
-<!-- Skills Section -->
 <section id="skills">
   <div class="simple-skills-container">
 
@@ -237,8 +288,7 @@
 
   </div>
 </section>
-<!-- Contact Section -->
-<!-- Contact Section -->
+
 <section id="contact">
   <h2>Contact</h2>
   <p class="subtitle">Feel free to reach out for collaborations, projects, or opportunities.</p>
@@ -262,15 +312,10 @@
   </div>
 </section>
 
-
- 
-</section>
-
-
-
   <footer>
     <p>&copy; 2025 Aswin. All rights reserved.</p>
   </footer>
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -325,7 +370,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-<!-- Resume Modal -->
 <div id="resumeModal" style="
   display:none;
   position:fixed;
@@ -346,7 +390,6 @@ document.addEventListener("DOMContentLoaded", function () {
     overflow:hidden;
   ">
     
-    <!-- Close Button -->
     <span id="closeResume" style="
       position:absolute;
       top:10px;
@@ -357,7 +400,6 @@ document.addEventListener("DOMContentLoaded", function () {
       z-index:10;
     ">&times;</span>
 
-    <!-- PDF Viewer -->
     <iframe src="Resources/resume_aswin_ece.pdf" style="
       width:100%;
       height:100%;

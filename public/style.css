@@ -22,7 +22,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0.8rem 1.5rem;
-  background: #fff;
+  background: #2a5298;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -32,6 +32,7 @@ nav {
 .logo {
   font-size: 1.4rem;
   font-weight: bold;
+  color: #fff;
 }
 
 .nav-links {
@@ -42,12 +43,12 @@ nav {
 
 .nav-links li a {
   text-decoration: none;
-  color: #333;
+  color: #fff;
   font-weight: 500;
 }
 
 .nav-links li a:hover {
-  color: #0077b6;
+  color: #000;
 }
 
 .hamburger {
@@ -262,7 +263,7 @@ header {
 }
 
 #projects .subtitle {
-  color: #666;
+  color: #2a5298;
   max-width: 700px;
   margin: 0 auto 1.5rem;
 }
@@ -281,7 +282,8 @@ header {
   border-radius: 12px;
   overflow: hidden;
   transition: 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(30, 60, 114, 0.1); /* Subtle ZigBee Blue tint */
+  border: 1px solid #e2e8f0;
 }
 
 .project-card:hover {
@@ -470,7 +472,7 @@ ul li {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  color: #111;
+  color:#2a5298;
   position: relative;
   padding-left: 10px;
 }
@@ -482,7 +484,7 @@ ul li {
   bottom: -6px;
   width: 60px;
   height: 4px;
-  background: #000;
+  background: #0077b6;
   border-radius: 4px;
 }
 .project-card {
@@ -512,7 +514,7 @@ ul li {
   justify-content: center;   /* horizontally center */
   align-items: center;       /* vertically center */
   padding: 10px 20px;
-  border: 2px solid #000;
+  border: 2px solid #0077b6;
   border-radius: 8px;
   
   font-size: 15px;
