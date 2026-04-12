@@ -2,38 +2,208 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Crack Detection</title>
-  <link rel="stylesheet" href="../style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Concrete Monitoring Project</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header - Custom Color Scheme for Concrete Project */
+    .project-header {
+      background: linear-gradient(135deg, #2c3e50, #4ca1af);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .project-header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    .project-header p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    /* Main Content */
+    .project-content {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.3rem;
+      color: #2c3e50;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* Full width section */
+    .full-width {
+      grid-column: 1 / -1;
+      text-align: center;
+    }
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Button */
+    .back-btn {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      color: #2c3e50;
+      border: 2px solid #2c3e50;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #2c3e50;
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .project-header h1 {
+        font-size: 1.8rem;
+      }
+
+      iframe {
+        height: 400px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<nav>
-  <div class="logo">Aswin</div>
-  <ul class="nav-links">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="../project.html">Projects</a></li>
-  </ul>
-</nav>
+  <header class="project-header">
+    <h1>Smart Crack Detection & Water Ingress Monitoring</h1>
+    <p>Integrated Health Monitoring for RCC and SFRC Specimens</p>
+  </header>
 
-<section style="max-width:900px; margin:auto; padding:2rem;">
-  <h2>Crack Detection System</h2>
+  <section class="project-content">
 
-  <img src="../Resources/crack.png" style="width:100%; border-radius:10px; margin:1rem 0;">
+    <div class="card">
+      <h2>📌 Overview</h2>
+      <p>
+        Research conducted at GEC Thrissur on Structural Health Monitoring (SHM). 
+        The project focuses on early-stage damage detection in concrete using 
+        advanced sensing to prevent structural failure and deterioration.
+      </p>
+    </div>
 
-  <p>
-    Developed an image-based crack detection system using computer vision techniques
-    to identify structural defects in surfaces.
-  </p>
+    <div class="card">
+      <h2>⚙️ Objective</h2>
+      <ul>
+        <li>Monitor crack initiation using Fiber Optic Sensors (DFOS)</li>
+        <li>Detect water ingress via capacitance-based sensing</li>
+        <li>Compare RCC and Steel Fiber Reinforced Concrete (SFRC)</li>
+      </ul>
+    </div>
 
-  <h3>Technologies Used</h3>
-  <ul>
-    <li>Python</li>
-    <li>OpenCV</li>
-    <li>Machine Learning</li>
-  </ul>
+    <div class="card">
+      <h2>🧠 Methodology</h2>
+      <p>
+        Specimens underwent three-point bending tests to analyze "fiber-bridging" 
+        mechanisms. Integrated capacitance sensors were embedded to establish 
+        relationships between permeability and moisture levels.
+      </p>
+    </div>
 
-</section>
+    <div class="card">
+      <h2>🛠️ Technologies Used</h2>
+      <ul>
+        <li>Distributed Fiber Optic Sensors (DFOS)</li>
+        <li>Capacitance-Based Moisture Sensors</li>
+        <li>Experimental UTM Testing</li>
+        <li>Online Monitoring Systems</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>🚀 Key Findings</h2>
+      <ul>
+        <li>Steel fibers significantly enhance crack resistance</li>
+        <li>DFOS allows real-time crack propagation tracking</li>
+        <li>Improved distribution of cracks in SFRC specimens</li>
+        <li>Effective correlation of moisture to sensor data</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>📊 Applications</h2>
+      <ul>
+        <li>Civil Infrastructure Monitoring</li>
+        <li>Bridges and High-Rise Durability</li>
+        <li>Predictive Maintenance for Concrete</li>
+        <li>Smart City Infrastructure</li>
+      </ul>
+    </div>
+
+    <div class="card full-width">
+      <h2>📄 Conference Paper</h2>
+      <p>View the full research paper presented at the conference below.</p>
+
+      <iframe src="../Resources/Conference final.pdf"></iframe>
+
+      <p style="margin-top:10px;">
+        For full-screen viewing, 
+        <a href="../Resources/Conference final.pdf" target="_blank">
+          click here to open the PDF
+        </a>.
+      </p>
+    </div>
+
+  </section>
+
+  <div class="back-btn">
+    <a href="../index.html" class="btn">⬅ Back to Portfolio</a>
+  </div>
 
 </body>
 </html>
