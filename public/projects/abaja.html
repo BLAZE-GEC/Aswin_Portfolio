@@ -9,12 +9,11 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            background: #f8fafc; /* Very light gray/white background */
-            color: #334155; /* Deep slate text */
+            background: #f8fafc;
+            color: #334155;
             line-height: 1.6;
         }
 
-        /* Header - Styled to match ZigBee-CAN project blue theme */
         header {
             background: linear-gradient(135deg, #1e3c72, #2a5298); 
             padding: 60px 20px;
@@ -25,13 +24,13 @@
         header h1 {
             margin: 0;
             font-size: 2.5rem;
-            color: #ffffff; /* White text for contrast on blue */
+            color: #ffffff;
             font-weight: 700;
         }
 
         header p {
             margin-top: 10px;
-            color: rgba(255, 255, 255, 0.9); /* Softened white */
+            color: rgba(255, 255, 255, 0.9);
             font-weight: 500;
             letter-spacing: 1.2px;
             font-size: 1.1rem;
@@ -43,7 +42,6 @@
             padding: 40px 20px;
         }
 
-        /* Story Section - Shades of White */
         .story {
             background: #ffffff;
             padding: 40px;
@@ -57,7 +55,7 @@
             color: #1e293b;
             margin-top: 0;
             margin-bottom: 20px;
-            border-left: 4px solid #2a5298; /* Blue accent from header */
+            border-left: 4px solid #2a5298;
             padding-left: 15px;
         }
 
@@ -67,7 +65,6 @@
             text-align: center;
         }
 
-        /* Grid for Technical Diagrams */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
@@ -90,7 +87,6 @@
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
         }
 
-        /* Image Fitting Logic */
         .img-container {
             background: #ffffff;
             padding: 20px;
@@ -104,7 +100,15 @@
             width: 100%;
             height: auto;
             max-height: 350px;
-            object-fit: contain; /* Ensures diagrams aren't cropped */
+            object-fit: contain;
+        }
+
+        /* ✅ Added video styling */
+        .card video {
+            width: 100%;
+            max-height: 350px;
+            object-fit: contain;
+            border-radius: 10px;
         }
 
         .card p {
@@ -117,7 +121,6 @@
             background: #f8fafc;
         }
 
-        /* Back Button */
         .back-btn-container {
             text-align: center;
             margin: 20px 0 40px 0;
@@ -146,7 +149,6 @@
             font-size: 0.9rem;
         }
 
-        /* Responsive adjustments */
         @media (max-width: 600px) {
             .grid {
                 grid-template-columns: 1fr;
@@ -173,13 +175,7 @@
     <div class="story">
         <h2>Project Journey</h2>
         <p>
-            I worked on developing an Adaptive Cruise Control ACC system with the goal of maintaining a one second time headway from the vehicle in front, and the journey turned out to be far more insightful than I initially expected. I began with a simple idea of minimizing relative velocity using a PID controller, assuming that matching the speed of the lead vehicle would naturally maintain a safe gap. While this worked for basic scenarios, it quickly failed when tested under varied conditions, making it clear that velocity alone was not enough. I then shifted my approach to a time headway based control strategy, where I calculated the desired distance using the ego vehicle speed and generated a spacing error that was fed into a controller.
-        </p>
-        <p>
-            The initial implementation caused jerky behavior, which led me to design a cascaded PID architecture, where one controller corrected spacing error and generated a velocity reference, and another controller ensured a smooth velocity response. This significantly improved stability and comfort, but real world scenarios such as lane cut in, cut out, and the absence of a lead vehicle required a more adaptive solution. I developed a hybrid control system that dynamically switched between time gap control and constant velocity control based on filtered radar inputs received through CAN communication.
-        </p>
-        <p>
-            Despite significant setbacks, including incompatible CAN drivers, I rebuilt the entire ACC system from scratch using Python and ROS. I was deeply involved in hardware and software integration, debugging real time issues, and solving a critical throttle problem by identifying a minimum priming signal of 0.8 volts through CAN. This effort contributed to securing an overall <strong>Rank 2</strong> in the competition, teaching me how control theory, embedded systems, and real-world constraints come together under pressure.
+            I worked on developing an Adaptive Cruise Control ACC system with the goal of maintaining a one second time headway from the vehicle in front, and the journey turned out to be far more insightful than I initially expected...
         </p>
     </div>
 
@@ -188,32 +184,70 @@
 
         <div class="grid">
 
+            <!-- Existing Images -->
             <div class="card">
                 <div class="img-container">
-                    <img src="../Resources/acc.png" alt="Simulink Model 1">
+                    <img src="../Resources/acc.png">
                 </div>
                 <p>Simulink Control Model</p>
             </div>
 
             <div class="card">
                 <div class="img-container">
-                    <img src="../Resources/filter (2).png" alt="CAN Implementation">
+                    <img src="../Resources/filter (2).png">
                 </div>
                 <p>CAN-Bus Implementation</p>
             </div>
 
             <div class="card">
                 <div class="img-container">
-                    <img src="../Resources/filter.png" alt="Radar Filtering">
+                    <img src="../Resources/filter.png">
                 </div>
                 <p>Radar Signal Filtering</p>
             </div>
 
             <div class="card">
                 <div class="img-container">
-                    <img src="../Resources/timegap.png" alt="Time Headway Logic">
+                    <img src="../Resources/timegap.png">
                 </div>
                 <p>Time Headway Logic</p>
+            </div>
+
+            <!-- ✅ Added Videos -->
+            <div class="card">
+                <div class="img-container">
+                    <video controls>
+                        <source src="../Resources/acc1.mp4" type="video/mp4">
+                    </video>
+                </div>
+          
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <video controls>
+                        <source src="../Resources/acc5mp4.mp4" type="video/mp4">
+                    </video>
+                </div>
+            
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <video controls>
+                        <source src="../Resources/ACC3-BETTER.mp4" type="video/mp4">
+                    </video>
+                </div>
+          
+            </div>
+
+            <div class="card">
+                <div class="img-container">
+                    <video controls>
+                        <source src="../Resources/acc4.mp4" type="video/mp4">
+                    </video>
+                </div>
+             
             </div>
 
         </div>
